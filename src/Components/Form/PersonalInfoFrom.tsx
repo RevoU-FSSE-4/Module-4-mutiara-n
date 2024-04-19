@@ -13,7 +13,7 @@ const PersonalInfoForm = ({onNext}:any) => {
         validationSchema : Yup.object().shape({
             fullName: Yup.string().min(2, 'Name is too short!').required('Full name required'),
             email: Yup.string().email('Invalid email format').required('Email required'),
-            dataOfBirth: Yup.date().required('Date of birth required')
+            dateOfBirth: Yup.date().required('Date of birth required')
           }),
           onSubmit: values => {
             onNext(values);
@@ -83,9 +83,8 @@ const PersonalInfoForm = ({onNext}:any) => {
 
       <div className="mt-6 flex items-center justify-end gap-x-6">
         <button
-          type="button"
-          className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-          onClick={onNext}>
+          type="submit"
+          className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
           Next
         </button>
       </div>

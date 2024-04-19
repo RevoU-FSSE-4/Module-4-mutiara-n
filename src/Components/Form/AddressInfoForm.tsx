@@ -33,7 +33,7 @@ const AddressInfoForm = ({ onNext, onPrevious}: any) => {
 
               <div className="col-span-full">
                   <label htmlFor="streetAddress" className="block text-sm font-medium leading-6 text-white-900">
-                    Street address
+                    Street Address
                   </label>
                   <div className="mt-2">
                     <input
@@ -108,16 +108,12 @@ const AddressInfoForm = ({ onNext, onPrevious}: any) => {
             onClick={onPrevious}
             >Previous</button>
             <button
-              type="button"
+              type="submit"
               className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              onClick={onNext}
             >Next</button>
           </div>
         </form>
       );
 }
-
-
-
 
 export default AddressInfoForm;
