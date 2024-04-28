@@ -22,12 +22,12 @@ export default function LoginComponent() {
             password: '',
     };    
 
-    async function onSubmit() {
+    async function onSubmit(values: { email: string, password:string }) {
 
         const body = {
-            "email": email,
-            "password": password
-        };
+            email: values.email,
+            password: values.password
+        };   
 
         const options = {
             method: 'POST', 
